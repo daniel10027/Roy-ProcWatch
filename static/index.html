@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Roy ProcWatch 👑</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<header>
+  <h1>Roy ProcWatch <span>👑</span></h1>
+  <div class="controls">
+    <input id="token" type="password" placeholder="X-Auth-Token" />
+    <input id="search" type="search" placeholder="Rechercher (pid, nom, cmd, user)…" />
+    <select id="sort">
+      <option value="cpu">Tri: CPU</option>
+      <option value="mem">Tri: Mémoire</option>
+      <option value="name">Tri: Nom</option>
+      <option value="pid">Tri: PID</option>
+    </select>
+    <select id="order">
+      <option value="desc">Desc</option>
+      <option value="asc">Asc</option>
+    </select>
+    <label class="auto">
+      <input id="autoRefresh" type="checkbox" checked> Auto
+    </label>
+    <button id="refresh">Rafraîchir</button>
+  </div>
+</header>
+
+<main>
+  <table id="procs">
+    <thead>
+      <tr>
+        <th>PID</th>
+        <th>Nom</th>
+        <th>Utilisateur</th>
+        <th>CPU %</th>
+        <th>RSS</th>
+        <th>Ports (local → remote)</th>
+        <th>Cmdline</th>
+        <th>Nice</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+</main>
+
+<footer>
+  <small>&copy; Votre Majesté — exécutez avec privilèges pour gérer les processus root.</small>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

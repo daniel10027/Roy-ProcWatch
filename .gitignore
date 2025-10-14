@@ -1,0 +1,75 @@
+# --- Python / Virtualenv ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+.build/
+dist/
+build/
+pip-wheel-metadata/
+*.manifest
+*.spec
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage
+.coverage
+.coverage.*
+.cache/
+.pytest_cache/
+.tox/
+htmlcov/
+.junit/
+nosetests.xml
+coverage.xml
+
+# Logs / temp
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+
+# --- Flask ---
+instance/
+*.db
+*.sqlite3
+*.sqlite
+*.pid
+
+# --- Environment & secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Editors / IDEs ---
+# VSCode
+.vscode/
+# PyCharm / IntelliJ
+.idea/
+*.iml
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+
+# --- Node (au cas où) ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Front build (si ajouté plus tard) ---
+static/dist/
+*.map

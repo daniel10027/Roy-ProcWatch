@@ -1,0 +1,15 @@
+[Unit]
+Description=Roy ProcWatch (process & ports) 👑
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/roy-procwatch
+Environment="PYTHONUNBUFFERED=1"
+EnvironmentFile=%h/roy-procwatch/.env
+ExecStart=%h/roy-procwatch/.venv/bin/python %h/roy-procwatch/app.py
+Restart=on-failure
+User=%i
+
+[Install]
+WantedBy=default.target
