@@ -459,5 +459,3 @@ tokenInput.addEventListener("input", () => localStorage.setItem("roy_token", tok
 ## Licence
 
 MIT – libre d’utilisation, modification et distribution. Ajoutez `LICENSE` si vous publiez le dépôt.
-
-````
